@@ -22,9 +22,7 @@ class Program
                 Console.WriteLine(goldCoinsDouble.GetType());
                 Console.WriteLine(goldCoinsDouble);
                 
-                int result;
-
-                if (int.TryParse(playerName, out result))
+                if (int.TryParse(playerName, out int result))
                 {
                     Console.WriteLine($"Conversion successful! Parsed integer value: {result}");
                 }
