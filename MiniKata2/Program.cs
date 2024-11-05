@@ -13,19 +13,26 @@ class Program
 
                 double playerHealthDouble = Convert.ToDouble(playerHealth);
                 int attackPowerInt = Convert.ToInt32(attackPower);
-                double experiencePointInt = Convert.ToDouble(experiencePoints);
+                int experiencePointInt = Convert.ToInt32(experiencePoints);
                 double goldCoinsDouble = Convert.ToDouble(goldCoins);
-                
                 
                 Console.WriteLine(playerHealthDouble.GetType());
                 Console.WriteLine(attackPowerInt.GetType());
                 Console.WriteLine(experiencePointInt.GetType());
                 Console.WriteLine(goldCoinsDouble.GetType());
                 Console.WriteLine(goldCoinsDouble);
-                // Console.WriteLine($"Character Name: {playerName}");
-                // Console.WriteLine($"Health Points: {playerHealth}");
-                // Console.WriteLine($"Attack Power: {attackPower}");
-                // Console.WriteLine($"Is Paralyzed: {isParalyzed}");
-                // Console.WriteLine($"Gold Coins: {goldCoins}");
+                
+                int result;
+
+                if (int.TryParse(playerName, out result))
+                {
+                    Console.WriteLine($"Conversion successful! Parsed integer value: {result}");
+                }
+                else
+                {
+                    Console.WriteLine("Conversion failed. Unable to parse the character name to an integer.");
+                }
+  
+           
     }
 }
