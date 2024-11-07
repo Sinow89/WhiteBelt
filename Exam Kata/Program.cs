@@ -10,17 +10,24 @@ class Program
         var random = new Random();
         
 
-        while (combat)
+        while (true)
         {
+            if (goblinHealth <= 0)
+            {
+                Console.WriteLine($"Victory, you defeated the Goblin!");
+                break;
+            }
+            
             Console.WriteLine("Choose an action:\n1. Attack\n2. Heal");
             string userInput = Console.ReadLine();
+            int heroDamage = random.Next(1, 20);
             
             if (userInput == "1")
             {
-                int damage = random.Next(1, 20);
+                
                 Console.WriteLine("Hero attacks the Goblin");
-                Console.WriteLine($"Goblin takes {damage} damage");
-                goblinHealth -= damage;
+                Console.WriteLine($"Goblin takes {heroDamage} damage");
+                goblinHealth -= heroDamage;
             }
 
             if (userInput == "2")
@@ -32,8 +39,15 @@ class Program
                     playerHealth += heal;
                 }
             }
+            int goblinDamage = random.Next(1, 20);
+            playerHealth -= goblinDamage;
+            Console.WriteLine($"Goblin attacks the Hero {goblinDamage}");
+            
             Console.WriteLine($"Hero's health: {playerHealth}");
             Console.WriteLine($"Goblin health: {goblinHealth}");
+
+
         }
+        
     }
 }
