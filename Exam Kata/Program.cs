@@ -21,6 +21,16 @@ class Program
                 Console.WriteLine($"Goblin takes {damage} damage");
                 goblinHealth -= damage;
             }
+
+            if (userInput == "2")
+            {
+                {
+                    int heal = random.Next(1, 20);
+                    Console.WriteLine("Hero heals himself");
+                    Console.WriteLine($"{heal} points healed ");
+                    playerHealth += heal;
+                }
+            }
             Console.WriteLine($"Hero's health: {playerHealth}");
             Console.WriteLine($"Goblin health: {goblinHealth}");
         }
