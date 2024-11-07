@@ -12,11 +12,6 @@ class Program
 
         while (true)
         {
-            if (goblinHealth <= 0)
-            {
-                Console.WriteLine($"Victory, you defeated the Goblin!");
-                break;
-            }
             
             Console.WriteLine("Choose an action:\n1. Attack\n2. Heal");
             string userInput = Console.ReadLine();
@@ -39,12 +34,27 @@ class Program
                     playerHealth += heal;
                 }
             }
+            
+            if (goblinHealth <= 0)
+            {
+                Console.WriteLine($"Victory, you defeated the Goblin!");
+                break;
+            }
+            
             int goblinDamage = random.Next(1, 20);
             playerHealth -= goblinDamage;
             Console.WriteLine($"Goblin attacks the Hero {goblinDamage}");
+
+            if (playerHealth <= 0)
+            {
+                Console.WriteLine($"NO YOU DIED!\nGame over!");
+                break;
+            }
             
             Console.WriteLine($"Hero's health: {playerHealth}");
             Console.WriteLine($"Goblin health: {goblinHealth}");
+
+            
 
 
         }
