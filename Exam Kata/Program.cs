@@ -6,10 +6,11 @@ class Program
     {
         int playerHealth = 80;
         int goblinHealth = 50;
+        bool combat = true;
         var random = new Random();
         
 
-        while (true)
+        while (combat)
         {
             Console.WriteLine("Choose an action:\n1. Attack\n2. Heal");
             string userInput = Console.ReadLine();
