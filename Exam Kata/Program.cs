@@ -21,8 +21,10 @@ class Program
             {
                 
                 Console.WriteLine("Hero attacks the Goblin");
+                Thread.Sleep(1000);
                 Console.WriteLine($"Goblin takes {heroDamage} damage");
                 goblinHealth -= heroDamage;
+                Thread.Sleep(1000);
             }
 
             if (userInput == "2")
@@ -30,8 +32,10 @@ class Program
                 {
                     int heal = random.Next(1, 20);
                     Console.WriteLine("Hero heals himself");
+                    Thread.Sleep(1000);
                     Console.WriteLine($"{heal} points healed ");
                     playerHealth += heal;
+                    Thread.Sleep(1000);
                 }
             }
             
@@ -43,7 +47,8 @@ class Program
             
             int goblinDamage = random.Next(1, 20);
             playerHealth -= goblinDamage;
-            Console.WriteLine($"Goblin attacks the Hero {goblinDamage}");
+            Console.WriteLine($"Goblin attacks the Hero {goblinDamage}\n");
+            Thread.Sleep(1000);
 
             if (playerHealth <= 0)
             {
@@ -52,7 +57,9 @@ class Program
             }
             
             Console.WriteLine($"Hero's health: {playerHealth}");
-            Console.WriteLine($"Goblin health: {goblinHealth}");
+            Console.WriteLine($"Goblin health: {goblinHealth}\n");
+            Thread.Sleep(1000);
+            
 
             
 
