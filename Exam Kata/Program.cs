@@ -9,7 +9,6 @@ class Program
         bool combat = true;
         var random = new Random();
         
-
         while (true)
         {
             
@@ -60,10 +59,6 @@ class Program
             Console.WriteLine($"Goblin health: {goblinHealth}\n");
             Thread.Sleep(1000);
             
-
-            
-
-
         }
         
     }
