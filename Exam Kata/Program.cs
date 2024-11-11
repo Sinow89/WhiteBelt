@@ -26,7 +26,7 @@ class Program
                 Thread.Sleep(1000);
             }
 
-            if (userInput == "2")
+            else if(userInput == "2")
             {
                 {
                     int heal = random.Next(1, 20);
